@@ -1,0 +1,222 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    margin: 0;
+    /* background-color: #fff; */
+    background-image: url('images/bg.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px;
+  }
+  
+  /* Header */
+  .header {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    /* background-color: #fff; */
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-content a {
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    font-weight: 500;
+    position: relative;      /* ← чтобы ::after цеплялся */
+    display: inline-block;   /* ← чтобы была своя строка/высота */
+    padding-bottom: 4px;     /* ← чтобы подчёркивание не прилипало к тексту */
+    transition: color 0.3s ease;
+  }
+  
+  /* активная */
+.header-content a.active {
+    color: #9747FF;
+  }
+  
+  /* ховер — цвет посветлее */
+  .header-content a:hover {
+    color: #b47cff;
+  }
+
+  /* линия под ссылкой */
+.header-content a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;               /* можно -3px, если хочешь чуть ниже */
+    width: 0;
+    height: 2px;
+    background-color: #b47cff;
+    transition: width 0.3s ease;
+  }
+  
+  /* при наведении — линия выезжает */
+  .header-content a:hover::after {
+    width: 100%;
+  }
+  
+  /* Sections */
+  .section {
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: left;
+    width: 100%;
+   
+  }
+  
+  .section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+ 
+  .project-image {
+    width: 100%;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease-in-out;
+  }
+  
+  /* При наведении фильтр снимается */
+  .project-image:hover {
+    filter: grayscale(0%);
+  }
+
+  /* Footer */
+  footer {
+    width: 100%;
+    border-top: 1px solid #000;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .footer-links a {
+    color: #000;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer a:hover {
+    color: #9747FF; /* твой фиолетовый из Figma */
+  }
+
+
+
+  /* === Contact Page Styles === */
+.contact-section {
+    max-width: 800px;
+    margin: 120px auto;
+    padding: 0 32px;
+    text-align: left;
+  }
+  
+  .contact-section h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 34px;
+  }
+  
+  .contact-section p {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  
+  .contact-info {
+    margin-bottom: 100px; /* отделили контакты от ссылок */
+    line-height: 1.6;
+  }
+  
+  .contact-info a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: #9747FF;
+  }
+  
+  
+
+
+  @media (max-width: 576px) {
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .header-content nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 8px; /* расстояние между ссылками */
+      }
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+    .header-content a {
+        margin: 6px 0;
+        display: block;
+      }
+
+      .project-image {
+        filter: none; /* сразу цветные картинки */
+      }
+      
+      .project-image:hover {
+        filter: none; /* при наведении — без изменений */
+      }
+      .header-content h3 {
+        font-size: 18px;
+      }
+      .section h2 {
+        font-size: 24px;
+      }
+  }
+
+  @media (max-width: 768px) {
+
+    .header-content h3 {
+        font-size: 18px;
+      }
+      .section h2 {
+        font-size: 28px;
+      }
+  }
+
+  
