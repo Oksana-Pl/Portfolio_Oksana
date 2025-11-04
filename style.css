@@ -134,8 +134,6 @@ body {
     color: #9747FF; /* твой фиолетовый из Figma */
   }
 
-
-
   /* === Contact Page Styles === */
 .contact-section {
     max-width: 800px;
@@ -170,7 +168,19 @@ body {
     color: #9747FF;
   }
   
-
+  .header-content .brand {
+    all: unset;                /* сбросить все стили, которые могли прилипнуть */
+    display: inline-block;     /* чтобы кликалась как элемент */
+    cursor: pointer;           /* курсор-рука при наведении */
+    color: #000;               /* наследуемый цвет текста */
+    text-decoration: none;     /* без подчёркивания */
+  }
+  
+  /* На всякий случай отключаем «подчёркивающую» псевдолинию */
+  .header-content .brand::after { content: none !important; }
+  
+  /* Ховер не меняет цвет */
+  .header-content .brand:hover { color: #000 !important; }
   
 
 
