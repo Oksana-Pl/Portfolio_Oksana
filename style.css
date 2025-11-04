@@ -26,7 +26,7 @@ body {
     align-items: center;
   }
   
-  .header-content nav a {
+  .header-content a {
     text-decoration: none;
     color: black;
     margin-left: 30px;
@@ -38,17 +38,17 @@ body {
   }
   
   /* активная */
-.header-content nav a.active {
+.header-content a.active {
     color: #9747FF;
   }
   
   /* ховер — цвет посветлее */
-  .header-content nav a:hover {
+  .header-content a:hover {
     color: #b47cff;
   }
 
   /* линия под ссылкой */
-.header-content nav a::after {
+.header-content a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -60,7 +60,7 @@ body {
   }
   
   /* при наведении — линия выезжает */
-  .header-content nav a:hover::after {
+  .header-content a:hover::after {
     width: 100%;
   }
   
@@ -168,19 +168,7 @@ body {
     color: #9747FF;
   }
   
-  .header-content .brand {
-    all: unset;                /* сбросить все стили, которые могли прилипнуть */
-    display: inline-block;     /* чтобы кликалась как элемент */
-    cursor: pointer;           /* курсор-рука при наведении */
-    color: #000;               /* наследуемый цвет текста */
-    text-decoration: none;     /* без подчёркивания */
-  }
   
-  /* На всякий случай отключаем «подчёркивающую» псевдолинию */
-  .header-content .brand::after { content: none !important; }
-  
-  /* Ховер не меняет цвет */
-  .header-content .brand:hover { color: #000 !important; }
   
 
 
