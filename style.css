@@ -26,7 +26,7 @@ body {
     align-items: center;
   }
   
-  .header-content a {
+  .header-content nav a {
     text-decoration: none;
     color: black;
     margin-left: 30px;
@@ -38,17 +38,17 @@ body {
   }
   
   /* активная */
-.header-content a.active {
+.header-content nav a.active {
     color: #9747FF;
   }
   
   /* ховер — цвет посветлее */
-  .header-content a:hover {
+  .header-content nav a:hover {
     color: #b47cff;
   }
 
   /* линия под ссылкой */
-.header-content a::after {
+.header-content nav a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -60,7 +60,7 @@ body {
   }
   
   /* при наведении — линия выезжает */
-  .header-content a:hover::after {
+  .header-content nav a:hover::after {
     width: 100%;
   }
   
@@ -170,17 +170,7 @@ body {
     color: #9747FF;
   }
   
-  .header-content h3 a,
-.header-content a h3 {
-  margin: 0;
-  padding: 0;
-  color: black;
-  text-decoration: none;
-}
 
-.header-content a:first-child {
-  margin-left: 0;
-}
   
 
 
