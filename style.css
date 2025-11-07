@@ -16,10 +16,7 @@ body {
     border-bottom: 1px solid #000;
    
   }
-  .header-content h3 {
-    font-weight: 500; /* medium, как ты хотела */
-    margin: 0;        /* чтобы убрать случайный отступ */
-  }
+  
   .header-content {
     max-width: 1200px;
     margin: auto;
