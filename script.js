@@ -36,7 +36,7 @@
 
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   if (motion.matches || !('IntersectionObserver' in window)) return;
-  const blocks = document.querySelectorAll('.section h2, .section > p, .contact-section h1, .contact-section > p');
+  const blocks = document.querySelectorAll('.about-intro h1, .section h2, .section > p, .contact-section h1, .contact-section > p');
   const observer = new IntersectionObserver(entries => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;

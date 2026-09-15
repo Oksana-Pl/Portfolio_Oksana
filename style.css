@@ -259,3 +259,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .reveal-word, .gallery > a.reveal-card { opacity: 1; transform: none; transition: none; }
   .gallery img, .project-image { transition: none; }
 }
+
+/* Short introduction */
+.about-intro { text-align: center; margin: 64px auto 24px; }
+.about-logo { display: block; width: 76px; height: auto; margin: 0 auto 28px; animation: about-logo-float 4s ease-in-out infinite; }
+.about-intro h1 { font-size: 24px; font-style: italic; font-weight: 500; margin: 0 0 16px; }
+.about-intro p { margin: 0; }
+@keyframes about-logo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@media (max-width: 576px) {
+  .about-intro { margin: 48px auto 8px; }
+  .about-logo { width: 64px; margin-bottom: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-logo { animation: none; }
+}
