@@ -220,3 +220,39 @@ body {
   }
 
   
+/* Social links */
+.footer-links { display: flex; justify-content: center; gap: 12px; }
+.footer-links a { margin: 0; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; transition: color .2s, background-color .2s; }
+.footer-links a:hover { background: #9747ff0d; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #9747ff; outline-offset: 5px; }
+.contact-section { width: 100%; max-width: 720px; box-sizing: border-box; margin: 80px auto; padding: 0; }
+.contact-section h1 { margin: 0 0 16px; }
+.contact-section > p { line-height: 1.6; }
+.enquiry-form { margin-top: 36px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.form-field { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; min-width: 0; }
+.form-field label { font-size: 14px; font-weight: 500; }
+.form-field input, .form-field textarea { box-sizing: border-box; width: 100%; border: 1px solid #aaa; border-radius: 4px; padding: 14px; font: inherit; color: #000; background: #ffffff80; }
+.form-field textarea { resize: vertical; min-height: 140px; }
+.enquiry-form button { display: inline-flex; gap: 32px; align-items: center; justify-content: space-between; padding: 15px 22px; border: 1px solid #000; border-radius: 4px; background: #000; color: #fff; font: inherit; cursor: pointer; transition: background .2s; }
+.enquiry-form button:hover { background: #6630ad; }
+.enquiry-form button:disabled { opacity: .65; cursor: wait; }
+.contact-section .form-status { font-size: 15px; line-height: 1.5; }
+.form-status:empty { display: none; }
+.form-status[data-state="error"] { color: #a02121; }
+.contact-section .direct-email { margin-top: 32px; font-size: 15px; }
+.direct-email a { color: inherit; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.reveal-word { opacity: 0; transition: opacity .6s ease; }
+.text-visible .reveal-word { opacity: 1; }
+.gallery > a.reveal-card { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1); }
+.gallery > a.reveal-card.is-visible { opacity: 1; transform: none; }
+@media (max-width: 576px) {
+  .contact-section { margin: 56px auto; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .enquiry-form button { width: 100%; }
+  .gallery > a.reveal-card { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-word, .gallery > a.reveal-card { opacity: 1; transform: none; transition: none; }
+  .gallery img, .project-image { transition: none; }
+}
