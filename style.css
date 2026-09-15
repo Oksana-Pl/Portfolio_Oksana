@@ -221,9 +221,12 @@ body {
 
   
 /* Social links */
-.footer-links { display: flex; justify-content: center; gap: 12px; }
-.footer-links a { margin: 0; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; transition: color .2s, background-color .2s; }
-.footer-links a:hover { background: #9747ff0d; }
+.footer-links { display: flex; justify-content: center; gap: 24px; }
+.footer-links a { margin: 0; min-width: 80px; display: inline-flex; flex-direction: column; align-items: center; gap: 9px; border-radius: 4px; transition: color .2s; }
+.social-icon { display: grid; place-items: center; width: 44px; height: 44px; box-sizing: border-box; border: 1px solid #0004; border-radius: 50%; background: #ffffff30; transition: border-color .2s, background-color .2s; }
+.social-icon svg { width: 21px; height: 21px; fill: currentColor; }
+.social-label { font-size: 13px; line-height: 1.4; white-space: nowrap; }
+.footer-links a:hover .social-icon, .footer-links a:focus-visible .social-icon { border-color: #9747ff; background: #9747ff0d; }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #9747ff; outline-offset: 5px; }
 .contact-section { width: 100%; max-width: 720px; box-sizing: border-box; margin: 80px auto; padding: 0; }
 .contact-section h1 { margin: 0 0 16px; }
