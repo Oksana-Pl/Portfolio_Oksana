@@ -237,7 +237,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .form-field label { font-size: 14px; font-weight: 500; }
 .form-field input, .form-field textarea { box-sizing: border-box; width: 100%; border: 1px solid #aaa; border-radius: 4px; padding: 14px; font: inherit; color: #000; background: #ffffff80; }
 .form-field textarea { resize: vertical; min-height: 140px; }
-.enquiry-form button { display: inline-flex; gap: 32px; align-items: center; justify-content: space-between; padding: 15px 22px; border: 1px solid #000; border-radius: 4px; background: #000; color: #fff; font: inherit; cursor: pointer; transition: background .2s; }
+.enquiry-form button { display: inline-flex; gap: 32px; align-items: center; justify-content: space-between; padding: 15px 22px; border: 1px solid #6759B2; border-radius: 4px; background: #6759B2; color: #fff; font: inherit; cursor: pointer; transition: background .2s; }
 .enquiry-form button:hover { background: #6630ad; }
 .enquiry-form button:disabled { opacity: .65; cursor: wait; }
 .contact-section .form-status { font-size: 15px; line-height: 1.5; }
